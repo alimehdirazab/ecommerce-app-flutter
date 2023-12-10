@@ -15,8 +15,16 @@ app.use(cors());
 mongoose.connect("mongodb+srv://alimehdirazab:alipass@cluster0.3ih62mr.mongodb.net/ecommerce?retryWrites=true&w=majority")
 
 const userRoutes = require('./router/user_routers');
-
 app.use('/api/user', userRoutes);
+
+const categoryRoutes = require('./router/category_routes');
+app.use('/api/category', categoryRoutes);
+
+const productRoutes = require('./router/product_routes');
+app.use('/api/product', productRoutes);
+
+const cartRoutes = require('./router/cart_routes');
+app.use('/api/cart', cartRoutes);
 
 const PORT = 5555;
 app.listen(PORT, () => console.log('Server is Running on Port : ', +PORT));
