@@ -8,7 +8,7 @@ productController = {
             const newProduct = new productModel(productData);
             await newProduct.save();
 
-            return res.json({ succes: true, data: newProduct, message: "Product Added Succesfully" });
+            return res.json({ success: true, data: newProduct, message: "Product Added Succesfully" });
         } catch (ex) {
             return res.json({ success: false, message: ex });
         }
@@ -17,7 +17,7 @@ productController = {
         try {
             const products = await productModel.find();
 
-            return res.json({ succes: true, data: products, message: "Products Fatched Succesfully" });
+            return res.json({ success: true, data: products, message: "Products Fatched Succesfully" });
         } catch (ex) {
             return json({ success: false, message: ex });
         }
@@ -27,7 +27,7 @@ productController = {
             const categoryId = req.params.id;
             const products = await productModel.find({ category: categoryId });
 
-            return res.json({ succes: true, data: products, message: "Products Fatched Succesfully" });
+            return res.json({ success: true, data: products, message: "Products Fatched Succesfully" });
         } catch (ex) {
             return json({ success: false, message: ex });
         }

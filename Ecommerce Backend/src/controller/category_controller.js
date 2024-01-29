@@ -8,9 +8,9 @@ categoryController = {
             const newCategory = new categoryModel(categoryData);
             await newCategory.save();
 
-            return res.json({ succes: true, data: newCategory, message: "Category Added Succesfully" });
+            return res.json({ success: true, data: newCategory, message: "Category Added Succesfully" });
         } catch (ex) {
-            return res.json({ succes: false, message: ex });
+            return res.json({ success: false, message: ex });
         }
 
     },
@@ -20,9 +20,9 @@ categoryController = {
             const Categories = await categoryModel.find();
 
 
-            return res.json({ succes: true, data: Categories, message: "All Categories Fatched Succesfully" });
+            return res.json({ success: true, data: Categories, message: "All Categories Fatched Succesfully" });
         } catch (ex) {
-            return res.json({ succes: false, message: ex });
+            return res.json({ success: false, message: ex });
         }
 
     },
@@ -32,12 +32,12 @@ categoryController = {
             const Categories = await categoryModel.findById(id);
 
             if (!Categories) {
-                return json({ succes: false, message: "category not found" });
+                return json({ success: false, message: "category not found" });
             }
 
-            return res.json({ succes: true, data: Categories, message: "All Categories Fatched Succesfully" });
+            return res.json({ success: true, data: Categories, message: "All Categories Fatched Succesfully" });
         } catch (ex) {
-            return res.json({ succes: false, message: ex });
+            return res.json({ success: false, message: ex });
         }
 
     }
