@@ -4,17 +4,19 @@ class PrimaryTextField extends StatelessWidget {
   final String labelText;
   final TextEditingController? controller;
   final bool obscureText;
-  const PrimaryTextField({
-    super.key,
-    required this.labelText,
-    this.controller,
-    this.obscureText = false,
-  });
+  final String? Function(String?)? validator;
+  const PrimaryTextField(
+      {super.key,
+      required this.labelText,
+      this.controller,
+      this.obscureText = false,
+      this.validator});
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       controller: controller,
+      validator: validator,
       obscureText: obscureText,
       decoration: InputDecoration(
         border: OutlineInputBorder(

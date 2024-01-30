@@ -6,7 +6,7 @@ userController = {
             const userData = req.body;
             const newUser = new userModel(userData);
             await newUser.save();
-
+            console.log("dsdsd");
             return res.json({ success: true, data: newUser, message: "User Created Succesfully" });
         } catch (ex) {
             return res.json({ success: false, message: ex });
