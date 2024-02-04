@@ -2,6 +2,7 @@ import 'dart:developer';
 
 import 'package:ecommerce_frontend/core/routes.dart';
 import 'package:ecommerce_frontend/core/ui.dart';
+import 'package:ecommerce_frontend/logic/cubits/category_cubit/category_cubit.dart';
 import 'package:ecommerce_frontend/logic/cubits/user_cubit/user_cubit.dart';
 import 'package:ecommerce_frontend/presentation/screens/auth/login_screen.dart';
 import 'package:ecommerce_frontend/presentation/screens/splash/splash_screen.dart';
@@ -11,8 +12,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  SharedPreferences instance = await SharedPreferences.getInstance();
-  instance.clear();
+  // SharedPreferences instance = await SharedPreferences.getInstance();
+  // instance.clear();
 
   Bloc.observer = MyBlocOberver();
   runApp(const EcommerceApp());
@@ -26,6 +27,7 @@ class EcommerceApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (context) => UserCubit()),
+        BlocProvider(create: (context) => CategoryCubit()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
