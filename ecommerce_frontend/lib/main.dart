@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:ecommerce_frontend/core/routes.dart';
 import 'package:ecommerce_frontend/core/ui.dart';
 import 'package:ecommerce_frontend/logic/cubits/category_cubit/category_cubit.dart';
+import 'package:ecommerce_frontend/logic/cubits/product_cubit/product_cubit.dart';
 import 'package:ecommerce_frontend/logic/cubits/user_cubit/user_cubit.dart';
 import 'package:ecommerce_frontend/presentation/screens/auth/login_screen.dart';
 import 'package:ecommerce_frontend/presentation/screens/splash/splash_screen.dart';
@@ -28,6 +29,7 @@ class EcommerceApp extends StatelessWidget {
       providers: [
         BlocProvider(create: (context) => UserCubit()),
         BlocProvider(create: (context) => CategoryCubit()),
+        BlocProvider(create: (context) => ProductCubit()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
