@@ -3,7 +3,6 @@ import 'package:ecommerce_frontend/logic/cubits/user_cubit/user_cubit.dart';
 import 'package:ecommerce_frontend/logic/cubits/user_cubit/user_state.dart';
 import 'package:ecommerce_frontend/presentation/screens/auth/provider/login_provider.dart';
 import 'package:ecommerce_frontend/presentation/screens/auth/signup_screen.dart';
-
 import 'package:ecommerce_frontend/presentation/screens/splash/splash_screen.dart';
 import 'package:ecommerce_frontend/presentation/widgets/gap_widget.dart';
 import 'package:ecommerce_frontend/presentation/widgets/link_button.dart';

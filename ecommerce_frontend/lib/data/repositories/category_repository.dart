@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:dio/dio.dart';
 import 'package:ecommerce_frontend/core/api.dart';
 import 'package:ecommerce_frontend/data/models/category/category_model.dart';

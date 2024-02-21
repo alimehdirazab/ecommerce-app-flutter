@@ -1,3 +1,4 @@
+import 'package:ecommerce_frontend/presentation/screens/cart/cart_screen.dart';
 import 'package:ecommerce_frontend/presentation/screens/home/category_screen.dart';
 import 'package:ecommerce_frontend/presentation/screens/home/profile_screen.dart';
 import 'package:ecommerce_frontend/presentation/screens/home/user_feed_screen.dart';
@@ -27,7 +28,9 @@ class _HomeScreenState extends State<HomeScreen> {
         title: const Text('Ecommerce App'),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, CartScreen.routeName); 
+            },
             icon: const Icon(CupertinoIcons.cart_fill),
           ),
         ],
